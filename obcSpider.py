@@ -77,7 +77,7 @@ class ObcSpider:
         except IndexError:
             return detail['title'], detail['summary'], cid, []
         root_html = etree.HTML(root)
-        lang_idx = self.__extract_lang_id(root_html, lang_id)
+        lang_idx = self.__extract_lang_id(root_html, self.lang_id)
         return detail['title'], detail['summary'], cid, extract_voice_lines(root_html, lang_idx)
 
     def __extract_lang_id(self, doc, lang_id: int) -> int:

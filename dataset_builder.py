@@ -70,6 +70,8 @@ class DatasetBuilder:
         for idx, (title, text, audio_url) in enumerate(lines):
             if text is None:
                 continue
+            # 去除文本中的换行符
+            text = text.replace('\n', '').replace('\r', '')
             filename = f"{prefix}{idx:05d}.wav"
             filepath = char_dir / filename
             tasks.append({
