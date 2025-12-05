@@ -99,7 +99,7 @@ class ObcSpider:
 
 if __name__ == '__main__':
     lang_id = 0
-    for (name, summary, cid, lines) in ObcSpider(configuration_key='honkai:_star_rail', lang_id=lang_id, include=['彦卿']):
+    for (name, summary, cid, lines) in ObcSpider(configuration_key='genshin_impact', lang_id=lang_id, include=['钟离']):
         print(f"{name} - {summary}")
         for (title, line, audio_url) in lines:
             print(f"\t{title} - {line}: {audio_url}")
